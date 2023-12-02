@@ -1,41 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Tic Tac Toe Game</title>
-</head>
-<body>
+# React Tic Tac Toe
 
-  <h1>Tic Tac Toe Game</h1>
+This is a simple implementation of the classic Tic Tac Toe game developed using React. It was built during my internship at Internshala Training and follows the standard rules of the game.
 
-  <p>This is a simple implementation of the classic Tic Tac Toe game developed during my internship at Internshala Training. The game is built using [mention programming language or technologies used] and follows standard Tic Tac Toe rules.</p>
+## Features
 
-  <h3>Features:</h3>
-  <ul>
-    <li><strong>Player vs Player:</strong> Play against a friend locally on the same device.</li>
-    <li><strong>Interactive Board:</strong> Visual representation of the game board for ease of play.</li>
-    <li><strong>Win Detection:</strong> Logic implemented to detect wins, losses, or draws.</li>
-  </ul>
+- **Player vs Player:** Play against a friend locally on the same device.
+- **Interactive Board:** Visual representation of the game board for ease of play.
+- **Win Detection:** Logic implemented to detect wins, losses, or draws.
 
-  <h3>How to Play:</h3>
-  <ol>
-    <li>Clone or download the repository.</li>
-    <li>Open the project in [mention IDE or environment].</li>
-    <li>Compile and run the code.</li>
-    <li>Follow the on-screen instructions to play the game.</li>
-  </ol>
+## How to Play
 
-  <p>Feel free to explore, contribute, or use this as a learning resource to understand basic game development concepts.</p>
+1. Clone or download the repository.
+2. Run `npm install` to install dependencies.
+3. Run `npm start` to start the development server.
+4. Open the provided URL in your browser.
+5. Follow the on-screen instructions to play the game.
 
-  <h3>Technologies/Languages Used:</h3>
-  <p>[List of programming languages or technologies used]</p>
+Feel free to explore the code, contribute, or use this as a learning resource for React game development.
 
-  <h3>Live Preview:</h3>
-  <p><a href="https://ticker-game.netlify.app/" target="_blank">Play the game here!</a></p>
+## Live Preview
 
-  <h3>Acknowledgments:</h3>
-  <p>Mention Internshala Training for providing the opportunity and guidance during the development process.</p>
+[Play the game here!](https://ticker-game.netlify.app/)
 
-</body>
-</html>
+## Technologies Used
 
+- **React:** JavaScript library for building user interfaces.
+- **HTML/CSS:** Basic structure and styling.
+- **JavaScript:** Logic and functionality.
+
+## Acknowledgments
+
+Special thanks to Internshala Training for providing the platform and guidance during the development process.
 
