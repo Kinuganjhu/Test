@@ -18,7 +18,7 @@ const Board = ({ squares, handleSquareClick }) => {
 
         {/* Second line row */}
         <div className='board-row'>
-          {renderSquare(3)}
+         {renderSquare(3)}
           {renderSquare(4)}
           {renderSquare(5)}
         </div>

@@ -6,24 +6,25 @@
   background-color: #fff;
   color: #000;
   cursor: pointer;
-  
-  
+
+
   &:hover {
     background-color: lightblue;
-    
   }
-  }
+}
 
 .board {
   width: 300px; /* Adjust the width to your preference */
   margin: 0 auto;
-  border: 2px solid #333;
+
+  border: 1px solid #333;
   display: flex;
   flex-direction: column;
 }
 
 .board-row {
   display: flex;
+  box-shadow: 4px 4px 4px lightblue;
 }
 
 .board-row div {
@@ -44,4 +45,17 @@
 
 .board-row div.O {
   color: red;
+}
+
+.text-green {
+  color: green;
+}
+
+.text-orange {
+  color: orange;
+}
+
+.status-message {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
