@@ -11,6 +11,9 @@ export default function App() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [isXNext, setIsXNext] = useState(true);
 
+  //for New Game
+  const New_Game = [{ squares: Array(9).fill(null), isXNext: false }];
+
   const winner = calculateWinner(squares);
   const gamingBoard = history[currentMove];
 
@@ -34,16 +37,30 @@ export default function App() {
     setSquares(nextSquareState);
     setIsXNext(!gamingBoard.isXNext);
   };
+
   const moveTO = (move) => {
     setCurrentMove(move);
     setSquares(history[move].squares);
     setIsXNext(history[move].isXNext);
   };
+
+  const onNewGame = () => {
+  setHistory([{ squares: Array(9).fill(null), isXNext: true }]);
+  setCurrentMove(0);
+  setSquares(Array(9).fill(null));
+  setIsXNext(true);
+};
+
   return (
     <div className='App'>
       <StatusMessage winner={winner} squares={squares} isXNext={isXNext} gamingBoard={gamingBoard} />
       <Board squares={squares} handleSquareClick={handleSquareClick} gamingBoard={gamingBoard} />
-      <History history={history} moveTo = {moveTO} currentMove = {currentMove} />
+      
+      <button onClick={() => onNewGame()} className = {`btn-reset ${winner? 'active': ' '}` }>Start New Game</button>
+
+      <h2>Current Game History</h2>
+      
+      <History history={history} moveTo={moveTO} currentMove={currentMove} />
     </div>
   );
 }
