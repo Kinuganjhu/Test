@@ -34,12 +34,16 @@ export default function App() {
     setSquares(nextSquareState);
     setIsXNext(!gamingBoard.isXNext);
   };
-
+  const moveTO = (move) => {
+    setCurrentMove(move);
+    setSquares(history[move].squares);
+    setIsXNext(history[move].isXNext);
+  };
   return (
     <div className='App'>
       <StatusMessage winner={winner} squares={squares} isXNext={isXNext} gamingBoard={gamingBoard} />
       <Board squares={squares} handleSquareClick={handleSquareClick} gamingBoard={gamingBoard} />
-      <History history={history} />
+      <History history={history} moveTo = {moveTO} currentMove = {currentMove} />
     </div>
   );
 }
