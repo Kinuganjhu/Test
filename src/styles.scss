@@ -24,7 +24,7 @@
 
 .board-row {
   display: flex;
-  box-shadow: 4px 4px 4px lightblue;
+  box-shadow: 4px 4px 4px 4px lightblue;
 }
 
 .board-row div {
@@ -47,7 +47,7 @@
   color: red;
 }
 
-.text-green {
+.text-green{
   color: green;
 }
 

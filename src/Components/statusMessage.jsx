@@ -16,8 +16,8 @@ const StatusMessage = ({ isXNext, squares, winner }) => {
       return (
         <>
           
-          <span className = 'text-orange'> O</span> and {' '}
-          <span className = 'text-gree n'> X</span>
+          <span className = 'text-orange'> O</span> and { ' '}
+          <span className = 'text-gree n'> X</span> 
 
         </>
       );
@@ -26,7 +26,7 @@ const StatusMessage = ({ isXNext, squares, winner }) => {
     if (!winner && !noMovesLeft) {
       return (
         <>
-          NextPlayer is { ' '}
+          Next Player is { ' '}
           <span className = {isXNext?'text-orange': 'text-green'}>
             {nextPlayer}
           </span> 

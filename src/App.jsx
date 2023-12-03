@@ -3,34 +3,43 @@ import './styles.scss';
 import Board from './Components/Board';
 import calculateWinner from './Components/winner';
 import StatusMessage from './Components/statusMessage';
+import History from './Components/History';
+
 export default function App() {
+  const [history, setHistory] = useState([{ squares: Array(9).fill(null), isXNext: false }]);
+  const [currentMove, setCurrentMove] = useState(0);
   const [squares, setSquares] = useState(Array(9).fill(null));
-  const [isXNext, setIsXNext] = useState(true); // Changed initial value to true
-  const winner = calculateWinner(squares); // 'Winner' to 'winner' for consistency
-  
+  const [isXNext, setIsXNext] = useState(true);
+
+  const winner = calculateWinner(squares);
+  const gamingBoard = history[currentMove];
 
   const handleSquareClick = (clickedPosition) => {
-    if (squares[clickedPosition] || winner) {
-      return; // Stop processing if there's a winner or square is already filled
+    if (gamingBoard.squares[clickedPosition] || winner) {
+      return;
     }
 
-    setSquares((currentSquares) => {
-      return currentSquares.map((squareValue, position) => {
-        if (clickedPosition === position) {
-          return isXNext ? 'X' : 'O';
-        }
-        return squareValue;
-      });
+    const nextSquareState = gamingBoard.squares.map((squareValue, position) =>
+      clickedPosition === position ? (gamingBoard.isXNext ? 'X' : 'O') : squareValue
+    );
+
+    const updatedHistory = history.slice(0, currentMove + 1);
+    updatedHistory.push({
+      squares: nextSquareState,
+      isXNext: !gamingBoard.isXNext,
     });
 
-    setIsXNext((prevIsNext) => !prevIsNext); // Changed setXIsNext to setIsXNext for clarity
+    setHistory(updatedHistory);
+    setCurrentMove(updatedHistory.length - 1);
+    setSquares(nextSquareState);
+    setIsXNext(!gamingBoard.isXNext);
   };
 
   return (
     <div className='App'>
-      <StatusMessage winner = {winner} squares = {squares} isXNext = {isXNext}/>
-    
-      <Board squares={squares} handleSquareClick={handleSquareClick} />
+      <StatusMessage winner={winner} squares={squares} isXNext={isXNext} gamingBoard={gamingBoard} />
+      <Board squares={squares} handleSquareClick={handleSquareClick} gamingBoard={gamingBoard} />
+      <History history={history} />
     </div>
   );
 }
