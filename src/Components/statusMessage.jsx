@@ -40,7 +40,7 @@ const StatusMessage = ({ isXNext, squares, winner }) => {
 
   return (
     <>
-      <div><h3 style = {{textAlign: 'center'}}>{renderMessage()}</h3></div>
+      <div className= 'status-message ' ><span>{renderMessage()}</span></div>
     </>
   );
 };

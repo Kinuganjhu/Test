@@ -52,7 +52,8 @@ export default function App() {
 };
 
   return (
-    <div className='App'>
+    <div className='app'>
+      <h1>TIC <span className ='text-green'>TAC </span> TOE</h1>
       <StatusMessage winner={winner} squares={squares} isXNext={isXNext} gamingBoard={gamingBoard} />
       <Board squares={squares} handleSquareClick={handleSquareClick} gamingBoard={gamingBoard} />
       
