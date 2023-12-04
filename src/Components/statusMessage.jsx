@@ -18,7 +18,7 @@ const StatusMessage = ({ isXNext, squares, winner }) => {
         <>
           
           <span className = 'text-orange'> O</span> and { ' '}
-          <span className = 'text-gree n'> X</span> 
+          <span className = 'text-green'> X</span> 
 
         </>
       );
