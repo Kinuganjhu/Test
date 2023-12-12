@@ -1,6 +1,6 @@
 # React Tic Tac Toe
 
-This is a simple implementation of the classic Tic Tac Toe game developed using React. It was built during my internship at Internshala Training and follows the standard rules of the game.
+This is a simple implementation of the classic Tic Tac Toe game developed using React. It was built during my training at Internshala Training and follows the standard rules of the game.
 
 ## Features
 
